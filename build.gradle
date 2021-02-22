@@ -75,3 +75,10 @@ task ios(type: Test) {
     }
     systemProperty 'platform', 'ios'
 }
+
+task none(type: Test) {
+    useJUnitPlatform {
+        excludeTags 'ios'
+        excludeTags 'android'
+    }
+}
