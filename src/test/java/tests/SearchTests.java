@@ -33,7 +33,7 @@ class SearchTests extends TestBase {
 
     @Test
     @Tag("ios")
-    @DisplayName("Successful search in wikipedia android app")
+    @DisplayName("search in ios")
     void searchIOSTest() {
 
         step("Открываем приложение", (step) -> { open();
@@ -43,8 +43,6 @@ class SearchTests extends TestBase {
         step("Вводим текст", (step) -> { $(AccessibilityId("Text Input")).setValue("hello@browserstack.com").pressEnter();
         });
         step("Проверяем наличие текста", (step) -> { $(AccessibilityId("Text Output")).shouldHave(text("hello@browserstack.com"));
-        });
-        step("Подтверждаем", (step) -> { $(AccessibilityId("Text Button")).click();
         });
     }
 }
