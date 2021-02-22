@@ -10,10 +10,10 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.appium.java_client.MobileBy.AccessibilityId;
 import static io.qameta.allure.Allure.step;
 
+@Tag("ios")
 class IosTests extends TestBase {
 
     @Test
-    @Tag("ios")
     @DisplayName("search in ios")
     void searchIOSTest() {
 

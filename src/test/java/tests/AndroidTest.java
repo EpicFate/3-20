@@ -11,10 +11,10 @@ import static io.appium.java_client.MobileBy.AccessibilityId;
 import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.className;
 
+@Tag("android")
 class AndroidTest extends TestBase {
 
     @Test
-    @Tag("android")
     @DisplayName("Successful search in wikipedia android app")
     void searchAndroidTest() {
 
