@@ -7,9 +7,7 @@ public class EnvironmentHelper {
 
 // PLATFORM CONFIG
     public final static String
-//        platform = System.getProperty("platform", "web");
-        platform = System.getProperty("platform", "android");
-//        platform = System.getProperty("platform", "ios");
+        platform = System.getProperty("platform", "ios");
 
 // BROWSERSTACK CONFIG
     public static final String
