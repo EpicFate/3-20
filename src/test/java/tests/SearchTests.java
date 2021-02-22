@@ -19,32 +19,32 @@ class SearchTests extends TestBase {
     @Test
     @Tag("android")
     @DisplayName("Successful search in wikipedia android app")
-    void successfulSearchWithStepsAndroid() {
+    void searchAndroidTest() {
 
         step("Открываем приложение", (step) -> { open();
         });
-        step("Открываем приложение", (step) -> { $(AccessibilityId("Search Wikipedia")).click();
+        step("Нажимаем на строку поиска", (step) -> { $(AccessibilityId("Search Wikipedia")).click();
         });
-        step("Открываем приложение", (step) -> { $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("BrowserStack");
+        step("Вводим запрос", (step) -> { $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("BrowserStack");
         });
-        step("Открываем приложение", (step) -> { $$(className("android.widget.TextView")).shouldBe(CollectionCondition.sizeGreaterThan(0));
+        step("Проверяем запрос", (step) -> { $$(className("android.widget.TextView")).shouldBe(CollectionCondition.sizeGreaterThan(0));
         });
     }
 
     @Test
     @Tag("ios")
     @DisplayName("Successful search in wikipedia android app")
-    void successfulSearchWithStepsIOS() {
+    void searchIOSTest() {
 
         step("Открываем приложение", (step) -> { open();
         });
-        step("Открываем приложение", (step) -> { $(AccessibilityId("Text Button")).click();
+        step("Нажимаем кнопку", (step) -> { $(AccessibilityId("Text Button")).click();
         });
-        step("Открываем приложение", (step) -> { $(AccessibilityId("Text Input")).setValue("hello@browserstack.com").pressEnter();
+        step("Вводим текст", (step) -> { $(AccessibilityId("Text Input")).setValue("hello@browserstack.com").pressEnter();
         });
-        step("Открываем приложение", (step) -> { $(AccessibilityId("Text Output")).shouldHave(text("hello@browserstack.com"));
+        step("Проверяем наличие текста", (step) -> { $(AccessibilityId("Text Output")).shouldHave(text("hello@browserstack.com"));
         });
-        step("Открываем приложение", (step) -> { $(AccessibilityId("Text Button")).click();
+        step("Подтверждаем", (step) -> { $(AccessibilityId("Text Button")).click();
         });
     }
 }
