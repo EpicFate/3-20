@@ -11,7 +11,7 @@ import static io.appium.java_client.MobileBy.AccessibilityId;
 import static io.qameta.allure.Allure.step;
 
 @Tag("ios")
-class IosTests extends TestBase {
+class IosTest extends TestBase {
 
     @Test
     @DisplayName("search in ios")
