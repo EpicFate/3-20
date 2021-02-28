@@ -31,6 +31,6 @@ public class TestBase {
 
         closeWebDriver();
 
-        attachVideo(sessionId); // in browserstack video url generates after driver close
+        attachVideo(sessionId);
     }
 }
